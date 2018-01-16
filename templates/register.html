@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Register</title>
+</head>
+<body>
+	
+	{{session['message']}}
+<form method="post" action="signup">
+	<label>Username</label>
+	<input type="text" name="username" value="{% if form %}{{form['username']}}{% endif %}">
+	<label>Email</label>
+	<input type="email" name="email" value="{% if form %}{{form['email']}}{% endif %}">
+	<label>Password</label>
+	<input type="password" name="password" value="{% if form %}{{form['password']}}{% endif %}">
+	<input type="submit" name="" value="submit">
+</form>
+<a href="login">Signin</a>
+</body>
+</html>
